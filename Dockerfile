@@ -26,7 +26,8 @@ RUN echo $(pwd)
 RUN curl -fsSL https://xmake.io/shget.text | bash 
 
 RUN source ~/.xmake/profile && export XMAKE_ROOT=y && python3 setup.py install -j8
-
+RUN echo $(cd /usr/local/lib/python3.10/dist-packages/matplotlib/mpl-data/&&ls -a)
+RUN echo $(cd /usr/local/lib/python3.10/dist-packages/matplotlib/mpl-data/&&pwd)
 #运行环境
 EXPOSE 8888
 ENV LD_PRELOAD=/lib/x86_64-linux-gnu/libstdc++.so.6:$LD_PRELOAD
