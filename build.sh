@@ -2,7 +2,7 @@
 sh cleanUnUsedDocker.sh
 # 当数一非空时，改变buildName
 [ $1 ]  && buildName=$1
-[ ! $buildName ] && buildName="hikyuu:latest"
+[ ! $buildName ] && buildName="hikyuu:$(date +%s)"
 
 #下载相关资源
 [ ! -f ta-lib-0.4.0-src.tar.gz ] && wget -c -O ta-lib-0.4.0-src.tar.gz http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz &
@@ -13,7 +13,7 @@ sh cleanUnUsedDocker.sh
 set -e
 echo "building .............................. $buildName"
 #docker build --no-cache -t=$buildName .
-docker build -t=$buildName .
+docker build -t=$buildName . 
 
 echo "build .............................. done"
 echo --------------------------------------------------
