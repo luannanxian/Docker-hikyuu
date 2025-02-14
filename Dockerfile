@@ -31,7 +31,7 @@ COPY font.sh /
 RUN cd / && sh font.sh
 
 # 配置密码
-COPY token.sh / 
-RUN cd / && sh token.sh
+#COPY token.sh / 
+#RUN cd / && sh token.sh
 
 
