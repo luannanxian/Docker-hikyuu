@@ -1,5 +1,5 @@
 #!/bin/bash
-echo start ................................. $0
+echo start build talib................................. $0
 
 #set -e
 tocheckfile=/ta-lib-0.4.0-src.tar.gz
