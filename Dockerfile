@@ -22,9 +22,9 @@ RUN mkdir /hikyuu
 RUN echo $(ls -l )
 RUN echo $(pwd)
 COPY  ./hikyuu /hikyuu/
-COPY src.patch /hikyuu/
+#COPY src.patch /hikyuu/
 WORKDIR /hikyuu
-RUN cd /hikyuu && patch -p0 xmake.lua < src.patch
+#RUN cd /hikyuu && patch -p0 xmake.lua < src.patch
 
 # #xmake安装
 RUN curl -fsSL https://xmake.io/shget.text | bash 
