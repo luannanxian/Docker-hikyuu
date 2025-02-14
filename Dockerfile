@@ -21,6 +21,7 @@ COPY  ./hikyuu /hikyuu/
 WORKDIR /hikyuu
 #RUN cd /hikyuu && patch -p0 xmake.lua < src.patch
 RUN echo $(ls -a)
+RUN echo $(pwd)
 # #xmake安装
 RUN curl -fsSL https://xmake.io/shget.text | bash 
 
