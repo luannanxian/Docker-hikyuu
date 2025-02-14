@@ -15,6 +15,7 @@ RUN  cd / && sh build_talib.sh
 RUN mkdir /hikyuu
 RUN pwd
 RUN ls
+RUN cd /hikyuu
 COPY  hikyuu /hikyuu
 COPY src.patch /hikyuu
 WORKDIR /hikyuu
