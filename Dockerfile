@@ -31,8 +31,8 @@ RUN echo $(cd /usr/local/lib/python3.10/dist-packages/matplotlib/mpl-data/&&pwd)
 RUN echo $(cd / && find . |grep matplotlib)
 #运行环境
 EXPOSE 8888
-ENV LD_PRELOAD=/lib/x86_64-linux-gnu/libstdc++.so.6:$LD_PRELOAD
-
+#ENV LD_PRELOAD=/lib/x86_64-linux-gnu/libstdc++.so.6:$LD_PRELOAD
+ENV LD_PRELOAD=/lib/aarch64-linux-gnu/libstdc++.so.6:$LD_PRELOAD
 # 安装中文字体
 COPY font.sh / 
 RUN cd / && sh font.sh
