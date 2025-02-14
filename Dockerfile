@@ -1,5 +1,5 @@
 FROM ubuntu:24.04
-MAINTAINER sion.lv "595652979@qq.com"
+MAINTAINER mr golden
 
 #依赖安装
 SHELL ["/bin/bash", "-c"]
@@ -37,8 +37,8 @@ ENV LD_PRELOAD=/lib/aarch64-linux-gnu/libstdc++.so.6:$LD_PRELOAD
 COPY font.sh / 
 RUN cd / && sh font.sh
 
+#安装hikyuu依赖
+RUN cd /hikyuu && pip install --ignore-installed --break-system-packages packaging && pip install --ignore-installed --break-system-packages pip && pip install -r requirements.txt --break-system-packages 
 # 配置密码
 #COPY token.sh / 
 #RUN cd / && sh token.sh
-
-
