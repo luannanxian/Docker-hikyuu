@@ -7,7 +7,7 @@ sh cleanUnUsedDocker.sh
 #下载相关资源
 [ ! -f ta-lib-0.4.0-src.tar.gz ] && wget -c -O ta-lib-0.4.0-src.tar.gz http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz &
 #[ ! -d hikyuu ] && git clone https://git.oschina.net/fasiondog/hikyuu.git
-[ ! -d hikyuu ] && git clone https://github.com/fasiondog/hikyuu.git &
+[ ! -d hikyuu ] && git clone https://github.com/fasiondog/hikyuu.git 
 [ -d hikyuu ] && echo "git pull hikyuu .........." && cd hikyuu && git pull && cd ..
 ls -a
 pwd
