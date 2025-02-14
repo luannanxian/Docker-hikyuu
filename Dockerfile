@@ -13,8 +13,10 @@ RUN  cd / && sh build_talib.sh
 
 #hikyuu编译
 RUN mkdir /hikyuu
-COPY  hikyuu /hikyuu/
-COPY src.patch /hikyuu/
+RUN pwd
+RUN ls
+COPY  hikyuu /hikyuu
+COPY src.patch /hikyuu
 WORKDIR /hikyuu
 RUN cd /hikyuu && patch -p0 xmake.lua < src.patch
 
