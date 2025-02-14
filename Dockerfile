@@ -16,8 +16,8 @@ RUN mkdir /hikyuu
 RUN pwd
 RUN ls
 RUN cd /hikyuu
-COPY  hikyuu /hikyuu
-COPY src.patch /hikyuu
+COPY  ./hikyuu /hikyuu/
+COPY src.patch /hikyuu/
 WORKDIR /hikyuu
 RUN cd /hikyuu && patch -p0 xmake.lua < src.patch
 
