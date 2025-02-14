@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 MAINTAINER sion.lv "595652979@qq.com"
 
 #依赖安装
