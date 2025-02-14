@@ -9,7 +9,8 @@ sh cleanUnUsedDocker.sh
 #[ ! -d hikyuu ] && git clone https://git.oschina.net/fasiondog/hikyuu.git
 [ ! -d hikyuu ] && git clone https://github.com/fasiondog/hikyuu.git &
 [ -d hikyuu ] && echo "git pull hikyuu .........." && cd hikyuu && git pull && cd ..
-
+ls -a
+pwd
 set -e
 echo "building .............................. $buildName"
 #docker build --no-cache -t=$buildName .
