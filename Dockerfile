@@ -10,7 +10,8 @@ RUN  apt-get clean
 RUN apt-get update
 RUN apt-get install -y libsqlite3-dev python3 python3-pip python3-dev curl unzip wget vim python3-pyqt5 git libmysqlclient-dev fonts-wqy-zenhei pipx
 RUN pipx ensurepath
-RUN pip install click jupyter pandas numpy flask matplotlib lxml h5py mkl bokeh pyecharts Flask-SQLAlchemy pytdx mysql-connector-python tables akshare GitPython --break-system-packages
+#RUN pip install click jupyter pandas numpy flask matplotlib lxml h5py mkl bokeh pyecharts Flask-SQLAlchemy pytdx mysql-connector-python tables akshare GitPython --break-system-packages
+RUN pip install click jupyter pandas numpy flask matplotlib lxml h5py bokeh pyecharts Flask-SQLAlchemy pytdx mysql-connector-python tables akshare GitPython --break-system-packages
 #Ta-Lib 
 COPY build_talib.sh \
  ta-lib-0.4.0-src.tar.gz  /
