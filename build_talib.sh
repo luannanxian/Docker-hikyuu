@@ -14,6 +14,6 @@ if [ -f $tocheckfile ]; then
   rm -rf ta-lib
 fi
 
-pip install ta-lib
+pip install ta-lib --break-system-packages
 
 echo done ................................. $0
