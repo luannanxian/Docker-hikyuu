@@ -18,7 +18,7 @@ RUN echo $(ls -l )
 RUN echo $(pwd)
 COPY  ./hikyuu /hikyuu/
 #COPY src.patch /hikyuu/
-WORKDIR /hikyuu
+#WORKDIR /hikyuu
 #RUN cd /hikyuu && patch -p0 xmake.lua < src.patch
 RUN cd /hikyuu
 RUN echo $(pwd)
