@@ -13,9 +13,8 @@ RUN  cd / && sh build_talib.sh
 
 #hikyuu编译
 RUN mkdir /hikyuu
-RUN pwd
-RUN ls
-RUN cd /hikyuu
+RUN echo $(ls -l )
+RUN echo $(pwd)
 COPY  ./hikyuu /hikyuu/
 COPY src.patch /hikyuu/
 WORKDIR /hikyuu
