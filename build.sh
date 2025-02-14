@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 sh cleanUnUsedDocker.sh
 # 当数一非空时，改变buildName
 [ $1 ]  && buildName=$1
