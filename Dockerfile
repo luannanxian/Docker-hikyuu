@@ -12,6 +12,7 @@ COPY build_talib.sh \
 RUN  cd / && sh build_talib.sh
 
 #hikyuu编译
+RUN mkdir /hikyuu
 COPY  hikyuu /hikyuu/
 COPY src.patch /hikyuu/
 WORKDIR /hikyuu
