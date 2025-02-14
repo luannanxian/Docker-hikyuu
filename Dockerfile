@@ -4,9 +4,10 @@ MAINTAINER sion.lv "595652979@qq.com"
 #依赖安装
 SHELL ["/bin/bash", "-c"]
 #替换成阿里源
-RUN  sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list
+RUN sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
+RUN sed -i 's/security.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
 RUN  apt-get clean
-RUN echo $(apt-get update)
+RUN apt-get update
 RUN apt-get install -y libsqlite3-dev python3 python3-pip python3-dev curl unzip wget vim python3-pyqt5 git libmysqlclient-dev fonts-wqy-zenhei pipx
 RUN pipx ensurepath
 RUN pip install click jupyter pandas numpy flask matplotlib lxml h5py mkl bokeh pyecharts Flask-SQLAlchemy pytdx mysql-connector-python tables akshare GitPython --break-system-packages
