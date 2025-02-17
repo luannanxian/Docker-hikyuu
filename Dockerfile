@@ -38,7 +38,7 @@ COPY font.sh /
 RUN cd / && sh font.sh
 
 #安装hikyuu依赖
-RUN cd /hikyuu && pip install --ignore-installed --break-system-packages packaging && pip install --ignore-installed --break-system-packages pip && pip install -r requirements.txt --break-system-packages 
+RUN cd /hikyuu && pip install --ignore-installed --break-system-packages packaging && pip install --ignore-installed --break-system-packages pip && python3 -m pip install -r requirements.txt --break-system-packages 
 # 配置密码
 #COPY token.sh / 
 #RUN cd / && sh token.sh
